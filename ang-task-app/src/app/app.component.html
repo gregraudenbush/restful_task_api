@@ -1,0 +1,33 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1>Welcome To the App y0</h1>
+
+<form (submit)="onSubmit()">
+        <!-- use the json pipe to see how newTask changes in real time -->
+        <!-- <p> {{ newtask | json }} </p> -->
+        <input type="text" name="newTask.title" [(ngModel)]="newtask.title" />
+        <input type="text" name="newTask.description" [(ngModel)]="newtask.description" />
+        <input type="text" name="newTask.completed" [(ngModel)]="newtask.completed" />
+
+        <input type="submit" value="Create Task" />
+</form>
+
+<div *ngFor="let task of mytasks">
+    
+
+        <table>
+            <tr>
+                <th>Title</th> 
+                <th>Description</th>
+                <th>Completed</th>
+            </tr>
+            <tr>
+                <td>{{task.title}}</td> 
+                <td>{{task.description}}</td>
+                <td>{{task.completed}}</td>
+            </tr>
+        </table>
+    
+</div>
+
+<button (click)="onButtonClick()" >Click me!</button>
+<h1 *ngIf="clicked">{{buttontest}}</h1>
