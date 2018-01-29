@@ -14,21 +14,16 @@ export class AppComponent implements OnInit{
   mytasks = [];
   clicked = false;
   buttontest = "ZOMG BUTTON.....MUST.....PRESS....."
-  newtask : any
+  
 
   constructor(private _httpService: HttpService){
   }
   ngOnInit(){
-    this.newtask = { title: "", description: "", completed: "" }
+    
     this.getTasksfromService();
 
   }
-  onSubmit() {
-    // Code to send off the form data (this.newTask) to the Service
-    // ...
-    // Reset this.newTask to a new, clean object.
-    this.newtask = { title: "", description: "", completed: "" }
-  }
+  
 
   getTasksfromService(){
     let tempObservable = this._httpService.getTasks();

@@ -1,0 +1,12 @@
+<p>
+  Enter your Task
+</p>
+<form (submit)="onSubmit()">
+  <!-- use the json pipe to see how newTask changes in real time -->
+  <p> {{ newtask | json }} </p>
+  <input type="text" name="newtask.title" [(ngModel)]="newtask.title" />
+  <input type="text" name="newtask.description" [(ngModel)]="newtask.description" />
+  <input type="text" name="newtask.completed" [(ngModel)]="newtask.completed" />
+
+  <input type="submit" value="Create Task" />
+</form>

@@ -5,16 +5,22 @@ import { HttpService } from './http.service';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
+import { CreateComponentComponent } from './create-component/create-component.component';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponentComponent
+    HomeComponentComponent,
+    CreateComponentComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
+
   ],
   providers: [HttpService],
   bootstrap: [AppComponent]

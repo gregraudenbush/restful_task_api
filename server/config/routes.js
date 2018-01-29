@@ -8,7 +8,8 @@ module.exports = function(app) {
 
   app.get('/:id', api.getone)
 
-  app.get('/new/:title/:desc/:comp', api.create)
+  //app.get('/new/:title/:desc/:comp', api.create)
+  app.post('/new', api.create)
 
   app.get('/remove/:task', api.remove)
 

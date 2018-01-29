@@ -16,7 +16,10 @@ export class HttpService {
     //tempObservable.subscribe(data => console.log("Got our tasks!", data));
     return this._http.get('/tasks')
     
- }
+  }
+  addTask(newtask){
+    return this._http.post('/new', newtask)
+}
 
 }
 

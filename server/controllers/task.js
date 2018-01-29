@@ -19,8 +19,18 @@ module.exports = {
       })
   },
 
+  // create: function(req, res) {
+  //   var api = new Api({title: req.params.title, description: req.params.desc, completed: req.params.comp});
+  //   api.save(function(err, task) {
+  //     if(err){
+  //       console.log("Bug in create route");
+  //     } else {
+  //       res.json({task: task});
+  //     }
+  //   })
+  // },
   create: function(req, res) {
-    var api = new Api({title: req.params.title, description: req.params.desc, completed: req.params.comp});
+    var api = new Api({title: req.body.title, description: req.body.description, completed: req.body.completed});
     api.save(function(err, task) {
       if(err){
         console.log("Bug in create route");
