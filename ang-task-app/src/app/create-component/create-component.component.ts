@@ -16,7 +16,9 @@ export class CreateComponentComponent implements OnInit {
   ngOnInit() {
     this.newtask = { title: "", description: "", completed: "" }
   }
-
+  //subscribes to our POST observable
+  //we bout this.newtask to our input forms, the submitted this.newtask as an argument to our observable.
+  //when button is clicked it sends the data through observable
   onSubmit() {
     let observable = this._httpService.addTask(this.newtask)
     observable.subscribe(data => {

@@ -15,16 +15,18 @@ export class AppComponent implements OnInit{
   clicked = false;
   buttontest = "ZOMG BUTTON.....MUST.....PRESS....."
   
+//includes the service in the constructor//
 
   constructor(private _httpService: HttpService){
   }
   ngOnInit(){
-    
+    //immediately loads the retrieval of all task when page loads
     this.getTasksfromService();
 
   }
   
-
+  // subscribes to observable to retrieve all things from DB
+  // for demos sake i had to exclude the bad data and inappropriate entries lol
   getTasksfromService(){
     let tempObservable = this._httpService.getTasks();
     tempObservable.subscribe(data => {
@@ -39,7 +41,7 @@ export class AppComponent implements OnInit{
     })
   }
 
-
+  //data binding example with a click event
   onButtonClick(): void {
     if(!this.clicked){
       this.clicked = true; 

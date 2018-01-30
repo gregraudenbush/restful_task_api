@@ -1,6 +1,9 @@
 <p>
   Enter your Task
 </p>
+
+<!-- Angular Submit event using Data Binding to transfer bound variable to observable-->
+
 <form (submit)="onSubmit()">
   <!-- use the json pipe to see how newTask changes in real time -->
   <p> {{ newtask | json }} </p>

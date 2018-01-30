@@ -4,10 +4,11 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class HttpService {
   
+  //includes the HttpClient to talk to my Node.js Server
   constructor(private _http: HttpClient) { 
     
   }
-
+  //OUR OBSERVABLES FOR GET ALL AND POST NEW
   getTasks(){
     console.log("in http.service.ts")
     // our http response is an Observable, store it in a variable

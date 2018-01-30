@@ -12,6 +12,7 @@
                 <th>Description</th>
                 <th>Completed</th>
             </tr>
+            <!-- Looping through mytasks -->
             <tr *ngFor="let task of mytasks">
                 <td>{{task.title}}</td> 
                 <td>{{task.description}}</td>
@@ -20,9 +21,13 @@
         </table>
     
 </div>
-
+<!-- Click event triggers -->
 <button (click)="onButtonClick()" >Click me!</button>
+<!-- condidtional watching variable with boolean -->
 <h1 *ngIf="clicked">{{buttontest}}</h1>
 
+<!-- angular routing link -->
 <button [routerLink]="['create']">Create a New Task!</button>
+
+<!-- router outlit where it loads upon registered route click -->
 <router-outlet></router-outlet>
